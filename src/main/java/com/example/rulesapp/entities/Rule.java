@@ -13,10 +13,13 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Rule {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
-    private String id;
+    private Long id;
 
     @Column(name = "ruleName", nullable = false)
     private String ruleName;
+
+    @Column(name = "rule", nullable = false)
+    private String rule;
 }
